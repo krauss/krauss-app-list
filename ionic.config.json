@@ -1,0 +1,7 @@
+{
+  "name": "krauss-app-list",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
