@@ -23,6 +23,9 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Bmi from './pages/Bmi';
+import CardCounter from './pages/CardCounter';
+import Collatz from './pages/Collatz';
 
 const App: React.FC = () => {
 
@@ -32,8 +35,11 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            <Route path="/page/:name" component={Page} exact />
-            <Redirect from="/" to="/page/Inbox" exact />
+            <Route path="/app/:name" component={Page} exact />
+            <Route path="/app/bmi-calculator" component={Bmi} exact />
+            <Route path="/app/card-counter" component={CardCounter} exact />
+            <Route path="/app/collatz" component={Collatz} exact />
+            <Redirect from="/" to="/app/Inbox" exact />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

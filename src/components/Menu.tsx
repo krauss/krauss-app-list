@@ -12,7 +12,7 @@ import {
 
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, skull, skullOutline, skullSharp, bodySharp, bodyOutline, barChartSharp, barChartOutline } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -24,32 +24,32 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Inbox',
-    url: '/page/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    title: 'BMI Calculator',
+    url: '/app/bmi-calculator',
+    iosIcon: bodyOutline,
+    mdIcon: bodySharp
   },
   {
-    title: 'Outbox',
-    url: '/page/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    title: 'Card Counter',
+    url: '/app/card-counter',
+    iosIcon: skullOutline,
+    mdIcon: skullSharp
   },
   {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    title: 'Collatz Conjecture',
+    url: '/app/collatz',
+    iosIcon: barChartOutline,
+    mdIcon: barChartSharp
   },
   {
-    title: 'Archived',
-    url: '/page/Archived',
+    title: 'Pyramide Builder',
+    url: '/app/Archived',
     iosIcon: archiveOutline,
     mdIcon: archiveSharp
   },
   {
-    title: 'Trash',
-    url: '/page/Trash',
+    title: 'Anonimous Chat',
+    url: '/app/Trash',
     iosIcon: trashOutline,
     mdIcon: trashSharp
   },
@@ -70,8 +70,8 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Inbox</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonListHeader>Krauss App List</IonListHeader>
+          <IonNote>jose.ricardo.k@gmail.com</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
